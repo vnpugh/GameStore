@@ -12,15 +12,21 @@ public class Product {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
+
+    @Column
     private String productName;
 
+    @Column
+
     private String productDescription;
+    @Column
 
     private Double productPrice;
+    @Column
 
     private int productQuantity;
+    @Column
 
     private LocalDate dateProductAdded;
 
@@ -28,6 +34,7 @@ public class Product {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
+
 
     public Product() {
     }

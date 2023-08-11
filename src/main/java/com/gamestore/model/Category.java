@@ -11,10 +11,14 @@ public class Category {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
+
+    @Column
     private String categoryName;
+
+    @Column
     private String categoryDescription;
+
 
     public Category() {
     }
